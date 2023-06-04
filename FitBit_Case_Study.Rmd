@@ -1,6 +1,6 @@
 ---
 title: "FitBit - Case Study"
-subtitle: Table of Contents
+subtitle: "Table of Contents"
 output:
   html_document:
     number_sections: yes
