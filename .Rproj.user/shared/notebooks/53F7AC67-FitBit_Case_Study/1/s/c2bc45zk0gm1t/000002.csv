@@ -1,0 +1,6 @@
+"0","```r
+ggplot(hourlyCalories_merged_byhours)+
+  geom_col(aes(x=Active_Hours, y=total_cal))+
+scale_x_continuous(breaks = seq(0, 23, 1), limits = c(0, 24), expand = c(0,0)) +
+scale_y_continuous(breaks = seq(0,45000 ,10000), limits = c(0, 45000), expand = c(0,0)) + theme(plot.subtitle = element_text(size  =  7), axis.line = element_line(linetype  =  'solid'), panel.grid.major = element_line(linetype  =  'blank'), panel.grid.minor = element_line(linetype  =  'blank'), panel.background = element_rect(colour  =  'black'), legend.key = element_rect(fill  =  'gray89'), legend.background = element_rect(fill  =  'gray3'), legend.position = 'none')  +  labs(title  =  'Calories By hour', subtitle=\"For every 1 hour\")+theme(plot.title = element_text(color = \"red\"))
+```"

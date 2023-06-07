@@ -1,0 +1,3 @@
+"0","hourly_analysis1<-hourly_combined_data |> group_by(weekday,Hour) |> summarise(totalsteps=sum(StepTotal),total_calories=sum(Calories),.groups = 'drop')"
+"0",""
+"0","ggplot(data=hourly_analysis1)+geom_col(mapping = aes(x=Hour, y=total_calories, fill=totalsteps))+ scale_fill_gradient(low = ""lightyellow"", high = ""red"")+facet_wrap(~weekday, ncol = 2 )+labs(title = ""Figure-5: Daily Activity by hour"", y = ""Total Calories"")+scale_x_continuous(breaks = 0:23) + theme(axis.text.x = element_text(size = 5))"

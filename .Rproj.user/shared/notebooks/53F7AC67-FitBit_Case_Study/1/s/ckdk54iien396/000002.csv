@@ -1,0 +1,186 @@
+"0","```r
+setwd(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16\")
+```"
+"1","Warning: The working directory was changed to C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16 inside a notebook chunk. The working directory will be reset when the chunk is finished running. Use the knitr root.dir option in the setup chunk to change the working directory for notebook chunks.
+"
+"0","```r
+Daily_Activity <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/dailyActivity_merged.csv\")
+```"
+"1","Rows: 940 Columns: 15── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr  (1): ActivityDate
+dbl (14): Id, TotalSteps, TotalDistance, TrackerDistance, LoggedActivitiesDistance, VeryActiveDistance, Modera...
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+Daily_Calories <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/dailyCalories_merged.csv\")
+```"
+"1","Rows: 940 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityDay
+dbl (2): Id, Calories
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+Daily_Intensities <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/dailyIntensities_merged.csv\")
+```"
+"1","Rows: 940 Columns: 10── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityDay
+dbl (9): Id, SedentaryMinutes, LightlyActiveMinutes, FairlyActiveMinutes, VeryActiveMinutes, SedentaryActiveDi...
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+Daily_Steps <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/dailySteps_merged.csv\")
+```"
+"1","Rows: 940 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityDay
+dbl (2): Id, StepTotal
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+Heartrate_seconds <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/heartrate_seconds_merged.csv\")
+```"
+"1","Rows: 2483658 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): Time
+dbl (2): Id, Value
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+Hourly_Calories<- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/hourlyCalories_merged.csv\")
+```"
+"1","Rows: 22099 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityHour
+dbl (2): Id, Calories
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+Hourly_Intensities <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/hourlyIntensities_merged.csv\")
+```"
+"1","Rows: 22099 Columns: 4── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityHour
+dbl (3): Id, TotalIntensity, AverageIntensity
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+Hourly_Steps<- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/hourlySteps_merged.csv\")
+```"
+"1","Rows: 22099 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityHour
+dbl (2): Id, StepTotal
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+minuteCaloriesNarrow_merged <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/minuteCaloriesNarrow_merged.csv\")
+```"
+"1","Rows: 1325580 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityMinute
+dbl (2): Id, Calories
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+minuteCaloriesWide_merged <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/minuteCaloriesWide_merged.csv\")
+```"
+"1","Rows: 21645 Columns: 62── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr  (1): ActivityHour
+dbl (61): Id, Calories00, Calories01, Calories02, Calories03, Calories04, Calories05, Calories06, Calories07, ...
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+minuteIntensitiesNarrow_merged <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/minuteIntensitiesNarrow_merged.csv\")
+```"
+"1","Rows: 1325580 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityMinute
+dbl (2): Id, Intensity
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+minuteIntensitiesWide_merged <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/minuteIntensitiesNarrow_merged.csv\")
+```"
+"1","Rows: 1325580 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityMinute
+dbl (2): Id, Intensity
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+minuteMETsNarrow_merged <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/minuteMETsNarrow_merged.csv\")
+```"
+"1","Rows: 1325580 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityMinute
+dbl (2): Id, METs
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+minuteSleep_merged <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/minuteSleep_merged.csv\")
+```"
+"1","Rows: 188521 Columns: 4── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): date
+dbl (3): Id, value, logId
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+minuteStepsNarrow_merged <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/minuteStepsNarrow_merged.csv\")
+```"
+"1","Rows: 1325580 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityMinute
+dbl (2): Id, Steps
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+minuteStepsWide_merged <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/minuteStepsNarrow_merged.csv\")
+```"
+"1","Rows: 1325580 Columns: 3── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): ActivityMinute
+dbl (2): Id, Steps
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+Daily_Sleep <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/sleepDay_merged.csv\")
+```"
+"1","Rows: 413 Columns: 5── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): SleepDay
+dbl (4): Id, TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+Weight_LogInfo <- read_csv(\"C:/Users/cemil/Desktop/Case Study/FitBit DataSet/Fitabase Data 4.12.16-5.12.16/weightLogInfo_merged.csv\")
+```"
+"1","Rows: 67 Columns: 8── Column specification ──────────────────────────────────────────────────────────────────────────────────────────
+Delimiter: \",\"
+chr (1): Date
+dbl (6): Id, WeightKg, WeightPounds, Fat, BMI, LogId
+lgl (1): IsManualReport
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"

@@ -1,0 +1,3 @@
+"0","corr_data<-daily_combined_data |> select(TotalSteps,TotalDistance,TrackerDistance,VeryActiveDistance,ModeratelyActiveDistance,LightActiveDistance,SedentaryActiveDistance,Calories,activity_level)"
+"0",""
+"0","ggpairs(daily_combined_data,columns = c(3,4,5,15,20,21),title=""Figure-3: Daily correlations 1"",ggplot2::aes(colour = activity_level,alpha=0.5),lower = list(combo = ""count""),upper = list(continuous = wrap(""cor"", size=3)))+theme(axis.text.x  = element_text(size = 6, angle = 90),axis.text.y  = element_text(size = 6), text = element_text(size=9))"

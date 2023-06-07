@@ -1,0 +1,5 @@
+"0","hourly_analysis2<-hourly_combined_data |> group_by(weekday,Hour) |> "
+"0","  summarise(average_intensity_level=mean(TotalIntensity, na.rm = TRUE),total_calories=sum(Calories))"
+"0",""
+"0","ggplot(data=hourly_analysis2)+geom_col(mapping = aes(x=Hour, y=average_intensity_level, fill=total_calories))+facet_grid(weekday~.)+scale_fill_distiller(palette = ""Spectral"")+scale_x_continuous(breaks = 0:23) +labs(title = ""Figure-6: Daily Intensity Level by hour"", y = ""Intensity Level"") + theme(axis.text.x = element_text(size = 5)) + theme(panel.background = element_rect(fill = NA),panel.grid.major = element_line(colour = ""gray90"","
+"0","    linetype = ""dashed""))"

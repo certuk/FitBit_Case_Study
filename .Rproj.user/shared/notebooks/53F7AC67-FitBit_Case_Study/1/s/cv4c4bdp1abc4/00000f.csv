@@ -1,0 +1,3 @@
+"0","#Gathering all datas in a list to analyse all in once: "
+"0",""
+"0","df_list<-list(daily_activity,daily_calories,daily_intensities,daily_sleep,daily_steps,hourly_calories,hourly_intensities,hourly_steps,weightloginfo,heartrate_seconds,minute_mets)"

@@ -1,0 +1,5 @@
+"0","```r
+hourlyCalories_merged_byhours<- hourlyCalories_merged %>% 
+  group_by(Active_Hours,Id) %>% summarise(total_cal=sum(Calories))
+  
+```"

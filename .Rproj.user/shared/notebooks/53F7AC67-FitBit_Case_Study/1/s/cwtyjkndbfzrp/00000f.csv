@@ -1,0 +1,1 @@
+"0","ggplot(data=daily_combined_data, mapping = aes(x=TotalTimeInBed, y=TotalMinutesAsleep))+geom_point()+geom_smooth(method=""lm"")+facet_wrap(~activity_level)+labs(title = ""Figure-4: Users Asleep and In Bed Durations (minutes)"",x = ""Total In Bed Duration"", y = ""Total Asleep Duration"")"

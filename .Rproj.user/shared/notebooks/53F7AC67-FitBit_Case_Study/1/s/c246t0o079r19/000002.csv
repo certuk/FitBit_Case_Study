@@ -1,0 +1,640 @@
+"0","```r
+install.packages(\"tidyverse\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/tidyverse_1.3.2.zip'
+Content type 'application/zip' length 428969 bytes (418 KB)
+downloaded 418 KB
+"
+"1","package ‘tidyverse’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"tidymodels\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘future.apply’, ‘progressr’, ‘numDeriv’, ‘SQUAREM’, ‘lava’, ‘listenv’, ‘parallelly’, ‘prodlim’, ‘future’, ‘warp’, ‘iterators’, ‘lhs’, ‘DiceDesign’, ‘patchwork’, ‘globals’, ‘gower’, ‘ipred’, ‘timeDate’, ‘furrr’, ‘slider’, ‘foreach’, ‘GPfit’, ‘conflicted’, ‘dials’, ‘hardhat’, ‘infer’, ‘modeldata’, ‘parsnip’, ‘recipes’, ‘rsample’, ‘tune’, ‘workflows’, ‘workflowsets’, ‘yardstick’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/future.apply_1.9.1.zip'
+Content type 'application/zip' length 155387 bytes (151 KB)
+downloaded 151 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/progressr_0.11.0.zip'
+Content type 'application/zip' length 275533 bytes (269 KB)
+downloaded 269 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/numDeriv_2016.8-1.1.zip'
+Content type 'application/zip' length 116102 bytes (113 KB)
+downloaded 113 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/SQUAREM_2021.1.zip'
+Content type 'application/zip' length 183063 bytes (178 KB)
+downloaded 178 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/lava_1.6.10.zip'
+Content type 'application/zip' length 2992443 bytes (2.9 MB)
+downloaded 2.9 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/listenv_0.8.0.zip'
+Content type 'application/zip' length 106707 bytes (104 KB)
+downloaded 104 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/parallelly_1.32.1.zip'
+Content type 'application/zip' length 305612 bytes (298 KB)
+downloaded 298 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/prodlim_2019.11.13.zip'
+Content type 'application/zip' length 401817 bytes (392 KB)
+downloaded 392 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/future_1.28.0.zip'
+Content type 'application/zip' length 698676 bytes (682 KB)
+downloaded 682 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/warp_0.2.0.zip'
+Content type 'application/zip' length 69840 bytes (68 KB)
+downloaded 68 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/iterators_1.0.14.zip'
+Content type 'application/zip' length 353494 bytes (345 KB)
+downloaded 345 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/lhs_1.1.5.zip'
+Content type 'application/zip' length 725647 bytes (708 KB)
+downloaded 708 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/DiceDesign_1.9.zip'
+Content type 'application/zip' length 330660 bytes (322 KB)
+downloaded 322 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/patchwork_1.1.2.zip'
+Content type 'application/zip' length 3240144 bytes (3.1 MB)
+downloaded 3.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/globals_0.16.1.zip'
+Content type 'application/zip' length 108077 bytes (105 KB)
+downloaded 105 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/gower_1.0.0.zip'
+Content type 'application/zip' length 255743 bytes (249 KB)
+downloaded 249 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/ipred_0.9-13.zip'
+Content type 'application/zip' length 389468 bytes (380 KB)
+downloaded 380 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/timeDate_4021.106.zip'
+Content type 'application/zip' length 1577954 bytes (1.5 MB)
+downloaded 1.5 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/furrr_0.3.1.zip'
+Content type 'application/zip' length 1024092 bytes (1000 KB)
+downloaded 1000 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/slider_0.2.2.zip'
+Content type 'application/zip' length 297242 bytes (290 KB)
+downloaded 290 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/foreach_1.5.2.zip'
+Content type 'application/zip' length 148091 bytes (144 KB)
+downloaded 144 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/GPfit_1.0-8.zip'
+Content type 'application/zip' length 77043 bytes (75 KB)
+downloaded 75 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/conflicted_1.1.0.zip'
+Content type 'application/zip' length 50484 bytes (49 KB)
+downloaded 49 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/dials_1.0.0.zip'
+Content type 'application/zip' length 382987 bytes (374 KB)
+downloaded 374 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/hardhat_1.2.0.zip'
+Content type 'application/zip' length 805033 bytes (786 KB)
+downloaded 786 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/infer_1.0.3.zip'
+Content type 'application/zip' length 2233975 bytes (2.1 MB)
+downloaded 2.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/modeldata_1.0.1.zip'
+Content type 'application/zip' length 4242033 bytes (4.0 MB)
+downloaded 4.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/parsnip_1.0.2.zip'
+Content type 'application/zip' length 1476490 bytes (1.4 MB)
+downloaded 1.4 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/recipes_1.0.1.zip'
+Content type 'application/zip' length 1436020 bytes (1.4 MB)
+downloaded 1.4 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/rsample_1.1.0.zip'
+Content type 'application/zip' length 483323 bytes (471 KB)
+downloaded 471 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/tune_1.0.0.zip'
+Content type 'application/zip' length 1649732 bytes (1.6 MB)
+downloaded 1.6 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/workflows_1.1.0.zip'
+Content type 'application/zip' length 236462 bytes (230 KB)
+downloaded 230 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/workflowsets_1.0.0.zip'
+Content type 'application/zip' length 2792799 bytes (2.7 MB)
+downloaded 2.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/yardstick_1.1.0.zip'
+Content type 'application/zip' length 855752 bytes (835 KB)
+downloaded 835 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/tidymodels_1.0.0.zip'
+Content type 'application/zip' length 116844 bytes (114 KB)
+downloaded 114 KB
+"
+"1","package ‘future.apply’ successfully unpacked and MD5 sums checked
+package ‘progressr’ successfully unpacked and MD5 sums checked
+package ‘numDeriv’ successfully unpacked and MD5 sums checked
+package ‘SQUAREM’ successfully unpacked and MD5 sums checked
+package ‘lava’ successfully unpacked and MD5 sums checked
+package ‘listenv’ successfully unpacked and MD5 sums checked
+package ‘parallelly’ successfully unpacked and MD5 sums checked
+package ‘prodlim’ successfully unpacked and MD5 sums checked
+package ‘future’ successfully unpacked and MD5 sums checked
+package ‘warp’ successfully unpacked and MD5 sums checked
+package ‘iterators’ successfully unpacked and MD5 sums checked
+package ‘lhs’ successfully unpacked and MD5 sums checked
+package ‘DiceDesign’ successfully unpacked and MD5 sums checked
+package ‘patchwork’ successfully unpacked and MD5 sums checked
+package ‘globals’ successfully unpacked and MD5 sums checked
+package ‘gower’ successfully unpacked and MD5 sums checked
+package ‘ipred’ successfully unpacked and MD5 sums checked
+package ‘timeDate’ successfully unpacked and MD5 sums checked
+package ‘furrr’ successfully unpacked and MD5 sums checked
+package ‘slider’ successfully unpacked and MD5 sums checked
+package ‘foreach’ successfully unpacked and MD5 sums checked
+package ‘GPfit’ successfully unpacked and MD5 sums checked
+package ‘conflicted’ successfully unpacked and MD5 sums checked
+package ‘dials’ successfully unpacked and MD5 sums checked
+package ‘hardhat’ successfully unpacked and MD5 sums checked
+package ‘infer’ successfully unpacked and MD5 sums checked
+package ‘modeldata’ successfully unpacked and MD5 sums checked
+package ‘parsnip’ successfully unpacked and MD5 sums checked
+package ‘recipes’ successfully unpacked and MD5 sums checked
+package ‘rsample’ successfully unpacked and MD5 sums checked
+package ‘tune’ successfully unpacked and MD5 sums checked
+package ‘workflows’ successfully unpacked and MD5 sums checked
+package ‘workflowsets’ successfully unpacked and MD5 sums checked
+package ‘yardstick’ successfully unpacked and MD5 sums checked
+package ‘tidymodels’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"lubridate\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/lubridate_1.8.0.zip'
+Content type 'application/zip' length 1303407 bytes (1.2 MB)
+downloaded 1.2 MB
+"
+"1","package ‘lubridate’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"janitor\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/janitor_2.1.0.zip'
+Content type 'application/zip' length 252356 bytes (246 KB)
+downloaded 246 KB
+"
+"1","package ‘janitor’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"read\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+"
+"1","Warning in install.packages :
+  package ‘read’ is not available for this version of R
+
+A version of this package for your version of R might be available elsewhere,
+see the ideas at
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages
+"
+"0","```r
+install.packages(\"skimr\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/skimr_2.1.4.zip'
+Content type 'application/zip' length 1238459 bytes (1.2 MB)
+downloaded 1.2 MB
+"
+"1","package ‘skimr’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"readr\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+also installing the dependency ‘vroom’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/vroom_1.6.0.zip'
+Content type 'application/zip' length 1350558 bytes (1.3 MB)
+downloaded 1.3 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/readr_2.1.3.zip'
+Content type 'application/zip' length 1195154 bytes (1.1 MB)
+downloaded 1.1 MB
+"
+"1","package ‘vroom’ successfully unpacked and MD5 sums checked
+package ‘readr’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"lubridate\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/lubridate_1.8.0.zip'
+Content type 'application/zip' length 1303407 bytes (1.2 MB)
+downloaded 1.2 MB
+"
+"1","package ‘lubridate’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"openair\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘deldir’, ‘RcppEigen’, ‘png’, ‘jpeg’, ‘interp’, ‘maps’, ‘latticeExtra’, ‘mapproj’, ‘hexbin’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/deldir_1.0-6.zip'
+Content type 'application/zip' length 310913 bytes (303 KB)
+downloaded 303 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/RcppEigen_0.3.3.9.2.zip'
+Content type 'application/zip' length 2283903 bytes (2.2 MB)
+downloaded 2.2 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/png_0.1-7.zip'
+Content type 'application/zip' length 188477 bytes (184 KB)
+downloaded 184 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/jpeg_0.1-9.zip'
+Content type 'application/zip' length 133125 bytes (130 KB)
+downloaded 130 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/interp_1.1-3.zip'
+Content type 'application/zip' length 1431128 bytes (1.4 MB)
+downloaded 1.4 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/maps_3.4.0.zip'
+Content type 'application/zip' length 3098852 bytes (3.0 MB)
+downloaded 3.0 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/latticeExtra_0.6-30.zip'
+Content type 'application/zip' length 2203672 bytes (2.1 MB)
+downloaded 2.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/mapproj_1.2.8.zip'
+Content type 'application/zip' length 59369 bytes (57 KB)
+downloaded 57 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/hexbin_1.28.2.zip'
+Content type 'application/zip' length 1465579 bytes (1.4 MB)
+downloaded 1.4 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/openair_2.11.zip'
+Content type 'application/zip' length 3044800 bytes (2.9 MB)
+downloaded 2.9 MB
+"
+"1","package ‘deldir’ successfully unpacked and MD5 sums checked
+package ‘RcppEigen’ successfully unpacked and MD5 sums checked
+package ‘png’ successfully unpacked and MD5 sums checked
+package ‘jpeg’ successfully unpacked and MD5 sums checked
+package ‘interp’ successfully unpacked and MD5 sums checked
+package ‘maps’ successfully unpacked and MD5 sums checked
+package ‘latticeExtra’ successfully unpacked and MD5 sums checked
+package ‘mapproj’ successfully unpacked and MD5 sums checked
+package ‘hexbin’ successfully unpacked and MD5 sums checked
+package ‘openair’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"psych\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+also installing the dependency ‘mnormt’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/mnormt_2.1.1.zip'
+Content type 'application/zip' length 179981 bytes (175 KB)
+downloaded 175 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/psych_2.2.9.zip'
+Content type 'application/zip' length 3822324 bytes (3.6 MB)
+downloaded 3.6 MB
+"
+"1","package ‘mnormt’ successfully unpacked and MD5 sums checked
+package ‘psych’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"DataExplorer\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘igraph’, ‘gridExtra’, ‘networkD3’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/igraph_1.3.5.zip'
+Content type 'application/zip' length 5843167 bytes (5.6 MB)
+downloaded 5.6 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/gridExtra_2.3.zip'
+Content type 'application/zip' length 1109546 bytes (1.1 MB)
+downloaded 1.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/networkD3_0.4.zip'
+Content type 'application/zip' length 196972 bytes (192 KB)
+downloaded 192 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/DataExplorer_0.8.2.zip'
+Content type 'application/zip' length 2546717 bytes (2.4 MB)
+downloaded 2.4 MB
+"
+"1","package ‘igraph’ successfully unpacked and MD5 sums checked
+package ‘gridExtra’ successfully unpacked and MD5 sums checked
+package ‘networkD3’ successfully unpacked and MD5 sums checked
+package ‘DataExplorer’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"VennDiagram\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘lambda.r’, ‘futile.options’, ‘futile.logger’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/lambda.r_1.2.4.zip'
+Content type 'application/zip' length 112105 bytes (109 KB)
+downloaded 109 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/futile.options_1.0.1.zip'
+Content type 'application/zip' length 21220 bytes (20 KB)
+downloaded 20 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/futile.logger_1.4.3.zip'
+Content type 'application/zip' length 99985 bytes (97 KB)
+downloaded 97 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/VennDiagram_1.7.3.zip'
+Content type 'application/zip' length 251260 bytes (245 KB)
+downloaded 245 KB
+"
+"1","package ‘lambda.r’ successfully unpacked and MD5 sums checked
+package ‘futile.options’ successfully unpacked and MD5 sums checked
+package ‘futile.logger’ successfully unpacked and MD5 sums checked
+package ‘VennDiagram’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"ggpubr\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+also installing the dependencies ‘Matrix’, ‘SparseM’, ‘MatrixModels’, ‘sp’, ‘minqa’, ‘nloptr’, ‘carData’, ‘abind’, ‘pbkrtest’, ‘quantreg’, ‘maptools’, ‘lme4’, ‘corrplot’, ‘car’, ‘ggrepel’, ‘ggsci’, ‘cowplot’, ‘ggsignif’, ‘polynom’, ‘rstatix’
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/Matrix_1.5-1.zip'
+Content type 'application/zip' length 4510507 bytes (4.3 MB)
+downloaded 4.3 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/SparseM_1.81.zip'
+Content type 'application/zip' length 1026945 bytes (1002 KB)
+downloaded 1002 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/MatrixModels_0.5-1.zip'
+Content type 'application/zip' length 425796 bytes (415 KB)
+downloaded 415 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/sp_1.5-0.zip'
+Content type 'application/zip' length 1793345 bytes (1.7 MB)
+downloaded 1.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/minqa_1.2.4.zip'
+Content type 'application/zip' length 449673 bytes (439 KB)
+downloaded 439 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/nloptr_2.0.3.zip'
+Content type 'application/zip' length 1001108 bytes (977 KB)
+downloaded 977 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/carData_3.0-5.zip'
+Content type 'application/zip' length 1822159 bytes (1.7 MB)
+downloaded 1.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/abind_1.4-5.zip'
+Content type 'application/zip' length 63750 bytes (62 KB)
+downloaded 62 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/pbkrtest_0.5.1.zip'
+Content type 'application/zip' length 356510 bytes (348 KB)
+downloaded 348 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/quantreg_5.94.zip'
+Content type 'application/zip' length 1728325 bytes (1.6 MB)
+downloaded 1.6 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/maptools_1.1-4.zip'
+Content type 'application/zip' length 2187693 bytes (2.1 MB)
+downloaded 2.1 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/lme4_1.1-30.zip'
+Content type 'application/zip' length 4884643 bytes (4.7 MB)
+downloaded 4.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/corrplot_0.92.zip'
+Content type 'application/zip' length 3844793 bytes (3.7 MB)
+downloaded 3.7 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/car_3.1-0.zip'
+Content type 'application/zip' length 1674516 bytes (1.6 MB)
+downloaded 1.6 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/ggrepel_0.9.1.zip'
+Content type 'application/zip' length 729609 bytes (712 KB)
+downloaded 712 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/ggsci_2.9.zip'
+Content type 'application/zip' length 2977720 bytes (2.8 MB)
+downloaded 2.8 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/cowplot_1.1.1.zip'
+Content type 'application/zip' length 1375199 bytes (1.3 MB)
+downloaded 1.3 MB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/ggsignif_0.6.3.zip'
+Content type 'application/zip' length 600815 bytes (586 KB)
+downloaded 586 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/polynom_1.4-1.zip'
+Content type 'application/zip' length 404847 bytes (395 KB)
+downloaded 395 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/rstatix_0.7.0.zip'
+Content type 'application/zip' length 606097 bytes (591 KB)
+downloaded 591 KB
+
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/ggpubr_0.4.0.zip'
+Content type 'application/zip' length 1906020 bytes (1.8 MB)
+downloaded 1.8 MB
+"
+"1","package ‘Matrix’ successfully unpacked and MD5 sums checked
+package ‘SparseM’ successfully unpacked and MD5 sums checked
+package ‘MatrixModels’ successfully unpacked and MD5 sums checked
+package ‘sp’ successfully unpacked and MD5 sums checked
+package ‘minqa’ successfully unpacked and MD5 sums checked
+package ‘nloptr’ successfully unpacked and MD5 sums checked
+package ‘carData’ successfully unpacked and MD5 sums checked
+package ‘abind’ successfully unpacked and MD5 sums checked
+package ‘pbkrtest’ successfully unpacked and MD5 sums checked
+package ‘quantreg’ successfully unpacked and MD5 sums checked
+package ‘maptools’ successfully unpacked and MD5 sums checked
+package ‘lme4’ successfully unpacked and MD5 sums checked
+package ‘corrplot’ successfully unpacked and MD5 sums checked
+package ‘car’ successfully unpacked and MD5 sums checked
+package ‘ggrepel’ successfully unpacked and MD5 sums checked
+package ‘ggsci’ successfully unpacked and MD5 sums checked
+package ‘cowplot’ successfully unpacked and MD5 sums checked
+package ‘ggsignif’ successfully unpacked and MD5 sums checked
+package ‘polynom’ successfully unpacked and MD5 sums checked
+package ‘rstatix’ successfully unpacked and MD5 sums checked
+package ‘ggpubr’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"here\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/here_1.0.1.zip'
+Content type 'application/zip' length 64144 bytes (62 KB)
+downloaded 62 KB
+"
+"1","package ‘here’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"formattable\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/formattable_0.2.1.zip'
+Content type 'application/zip' length 172851 bytes (168 KB)
+downloaded 168 KB
+"
+"1","package ‘formattable’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"
+"0","```r
+install.packages(\"scales\")
+```"
+"1","WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+Installing package into ‘C:/Users/cemil/AppData/Local/R/win-library/4.2’
+(as ‘lib’ is unspecified)
+trying URL 'https://cran.rstudio.com/bin/windows/contrib/4.2/scales_1.2.1.zip'
+Content type 'application/zip' length 615057 bytes (600 KB)
+downloaded 600 KB
+"
+"1","package ‘scales’ successfully unpacked and MD5 sums checked
+
+The downloaded binary packages are in
+	C:\Users\cemil\AppData\Local\Temp\RtmpKeteY8\downloaded_packages
+"

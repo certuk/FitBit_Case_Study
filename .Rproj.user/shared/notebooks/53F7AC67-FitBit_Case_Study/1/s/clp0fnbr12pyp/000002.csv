@@ -1,0 +1,4 @@
+"0","```r
+data_list <- list(Daily_Activity,Daily_Calories,Daily_Intensities,Daily_Sleep,Daily_Steps,Weight_LogInfo,Heartrate_seconds)
+plot_str(data_list)
+```"

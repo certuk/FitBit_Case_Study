@@ -1,0 +1,35 @@
+"0","```r
+n_distinct(Daily_Activity$Id)
+```"
+"1","[1] 33
+"
+"0","```r
+n_distinct(Daily_Calories$Id)
+```"
+"1","[1] 33
+"
+"0","```r
+n_distinct(Daily_Intensities$Id)
+```"
+"1","[1] 33
+"
+"0","```r
+n_distinct(Daily_Sleep$Id)
+```"
+"1","[1] 24
+"
+"0","```r
+n_distinct(Daily_Steps$Id)
+```"
+"1","[1] 33
+"
+"0","```r
+n_distinct(Heartrate_seconds$Id)
+```"
+"1","[1] 14
+"
+"0","```r
+n_distinct(Weight_LogInfo$Id)
+```"
+"1","[1] 8
+"

@@ -1,0 +1,3 @@
+"0",""
+"0","corgraph<-ggpairs(daily_combined_data,columns = c(18,19,21),title=""Figure-3: Daily correlations 2"",ggplot2::aes(colour = activity_level,alpha=0.5),lower = list(combo = ""count""))"
+"0","corgraph+theme(axis.text.x  = element_text(size = 6, angle = 90),axis.text.y  = element_text(size = 6), text = element_text(size=8))"

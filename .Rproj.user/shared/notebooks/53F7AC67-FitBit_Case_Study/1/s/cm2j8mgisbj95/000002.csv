@@ -1,0 +1,4 @@
+"0","```r
+hourlyCalories_merged<-hourlyCalories_merged %>% 
+  mutate(Active_Hours=hour(ActivityHour_Formated))
+```"

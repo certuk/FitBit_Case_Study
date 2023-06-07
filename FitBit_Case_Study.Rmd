@@ -125,11 +125,11 @@ df_list<-list(daily_activity,daily_calories,daily_intensities,daily_sleep,daily_
 
 #Finding distinct_id values
 
-Distinct_id<-df_list |> map(c(1)) |> map_int(n_distinct)
+Distinct_id<-df_list %>% map(c(1)) %>% map_int(n_distinct)
 
 #Finding missing rows
 
-Missing_row <-df_list |>  map_int(n_missing)
+Missing_row <-df_list %>%  map_int(n_missing)
 
 #Finding duplicated values
 
@@ -198,18 +198,18 @@ hourly_intensities<-hourly_intensities %>% mutate(ActivityHour=mdy_hms(ActivityH
 hourly_steps<-hourly_steps %>% mutate(ActivityHour=mdy_hms(ActivityHour)) %>% mutate(Hour=hour(ActivityHour),weekday=wday(ActivityHour, abbr = FALSE,label=TRUE, locale = "EN"))
 heartrate_seconds<-heartrate_seconds %>% mutate(Time=mdy_hms(Time)) %>% mutate(Hour=hour(Time),weekday=wday(Time,abbr = FALSE, label=TRUE, locale = "EN"))
 
-daily_mets<-minute_mets |> mutate(ActivityMinute=mdy_hms(ActivityMinute)) |> mutate(ActivityMinute=date(ActivityMinute))|>  mutate(weekday=wday(ActivityMinute,abbr = FALSE, label=TRUE, locale = "EN")) |> rename(date=ActivityMinute) |> 
-  group_by(Id,date) |> summarise(average_daily_mets=round(mean(METs),digits = 0), .groups = "keep")
+daily_mets<-minute_mets %>% mutate(ActivityMinute=mdy_hms(ActivityMinute)) %>% mutate(ActivityMinute=date(ActivityMinute))%>%  mutate(weekday=wday(ActivityMinute,abbr = FALSE, label=TRUE, locale = "EN")) %>% rename(date=ActivityMinute) %>% 
+  group_by(Id,date) %>% summarise(average_daily_mets=round(mean(METs),digits = 0), .groups = "keep")
 
-hourly_mets<-minute_mets |> mutate(ActivityMinute=mdy_hms(ActivityMinute))|> mutate(ActivityMinute=date(ActivityMinute)) |> mutate(hour=hour(ActivityMinute))|>  mutate(weekday=wday(ActivityMinute,abbr = FALSE, label=TRUE, locale = "EN")) |> rename(date=ActivityMinute) |> 
-  group_by(Id,,date,hour) |> summarise(average_hourly_mets=round(mean(METs),digits = 0), .groups = "keep")
+hourly_mets<-minute_mets %>% mutate(ActivityMinute=mdy_hms(ActivityMinute))%>% mutate(ActivityMinute=date(ActivityMinute)) %>% mutate(hour=hour(ActivityMinute))%>%  mutate(weekday=wday(ActivityMinute,abbr = FALSE, label=TRUE, locale = "EN")) %>% rename(date=ActivityMinute) %>% 
+  group_by(Id,,date,hour) %>% summarise(average_hourly_mets=round(mean(METs),digits = 0), .groups = "keep")
 #Also we can name the all date columns with same name to make the merging process easy.
 
-daily_activity <-daily_activity |> rename(date=ActivityDate)
-daily_calories<-daily_calories |> rename(date=ActivityDay)
-daily_intensities<-daily_intensities |> rename(date=ActivityDay)
-daily_sleep<-daily_sleep |> rename(date=SleepDay)
-daily_steps<-daily_steps |> rename(date=ActivityDay)
+daily_activity <-daily_activity %>% rename(date=ActivityDate)
+daily_calories<-daily_calories %>% rename(date=ActivityDay)
+daily_intensities<-daily_intensities %>% rename(date=ActivityDay)
+daily_sleep<-daily_sleep %>% rename(date=SleepDay)
+daily_steps<-daily_steps %>% rename(date=ActivityDay)
 
 ```
 
@@ -228,20 +228,20 @@ When we look at the data frames of daily activity and daily intesities, they hav
 intersect_daily_activity_intensties<- intersect(colnames(daily_activity),colnames(daily_intensities))
 intersect_daily_calories<-intersect(colnames(daily_activity),colnames(daily_calories))
 
-daily_steps<-daily_steps |> rename(TotalSteps=StepTotal)
+daily_steps<-daily_steps %>% rename(TotalSteps=StepTotal)
 intersect_daily_steps<-intersect(colnames(daily_activity),colnames(daily_steps))
 
 intersect_daily_activity_intensties
 
 intersect_daily_calories
 #Let's select the identical columns from both data frame
- sc_daily_activity<-daily_activity |> select(intersect_daily_activity_intensties)
- sc_daily_intensities<-daily_intensities |> select(intersect_daily_activity_intensties)
+ sc_daily_activity<-daily_activity %>% select(intersect_daily_activity_intensties)
+ sc_daily_intensities<-daily_intensities %>% select(intersect_daily_activity_intensties)
  
- sc_daily_calories<-daily_calories |> select(intersect_daily_calories)
- sc_daily_activity_calories<-daily_activity |> select(intersect_daily_calories)
- sc_daily_steps<-daily_steps |> select(intersect_daily_steps)
- sc_daily_activity_steps<-daily_activity |> select(intersect_daily_steps)
+ sc_daily_calories<-daily_calories %>% select(intersect_daily_calories)
+ sc_daily_activity_calories<-daily_activity %>% select(intersect_daily_calories)
+ sc_daily_steps<-daily_steps %>% select(intersect_daily_steps)
+ sc_daily_activity_steps<-daily_activity %>% select(intersect_daily_steps)
  
 
 
@@ -259,9 +259,9 @@ Since the all columns of daily_intensities, daily_calories and daily_steps are e
 In addition I catagorised the activit level according to total daily steps.[(source)](https://www.10000steps.org.au/articles/healthy-lifestyles/counting-steps/)
 ```{r}
 
-daily_combined_data<-daily_activity |> left_join(daily_sleep, by=c("Id","date","weekday")) |> left_join(daily_mets, by=c("Id","date"))
+daily_combined_data<-daily_activity %>% left_join(daily_sleep, by=c("Id","date","weekday")) %>% left_join(daily_mets, by=c("Id","date"))
 
-daily_combined_data<-daily_combined_data |> mutate(activity_level=case_when(
+daily_combined_data<-daily_combined_data %>% mutate(activity_level=case_when(
   TotalSteps < 5000 ~ "Sedentary",
   TotalSteps >= 5000 & TotalSteps<7500 ~ "LightlyActive",
   TotalSteps>=7500 & TotalSteps<10000~ "ModerateActive",
@@ -270,8 +270,8 @@ daily_combined_data<-daily_combined_data |> mutate(activity_level=case_when(
 ))
  activity_level<-c("Sedentary","LightlyActive" ,"ModerateActive","Active","VeryActive")
 daily_combined_data$activity_level<-factor(daily_combined_data$activity_level,levels = activity_level)
-hourly_combined0 <- hourly_calories |> left_join(hourly_intensities, by=c("Id","ActivityHour","Hour","weekday"))
-hourly_combined_data <- hourly_combined0 |> left_join(hourly_steps,by=c("Id","ActivityHour","Hour","weekday"))
+hourly_combined0 <- hourly_calories %>% left_join(hourly_intensities, by=c("Id","ActivityHour","Hour","weekday"))
+hourly_combined_data <- hourly_combined0 %>% left_join(hourly_steps,by=c("Id","ActivityHour","Hour","weekday"))
 
 ```
 
@@ -281,7 +281,7 @@ hourly_combined_data <- hourly_combined0 |> left_join(hourly_steps,by=c("Id","Ac
 
 
 ```{r, echo=FALSE}
-daily_mean_calories<- daily_combined_data |> group_by(weekday) |>  summarise(daily_mean_calories=mean(Calories)) |> arrange(desc(daily_mean_calories)) 
+daily_mean_calories<- daily_combined_data %>% group_by(weekday) %>%  summarise(daily_mean_calories=mean(Calories)) %>% arrange(desc(daily_mean_calories)) 
 
 
 ggplot(data = daily_mean_calories, mapping = aes(x=reorder(weekday,daily_mean_calories), y=daily_mean_calories,fill=daily_mean_calories,))+geom_bar(stat = "identity")+
@@ -310,7 +310,7 @@ kbl(text_tbl) %>%
 
 
 ```{r, eval=TRUE, echo=FALSE}
-caloriesandsteps_byday<- daily_combined_data |> group_by(date) |>drop_na() |>  summarise(avg_step=mean(TotalSteps),avg_calories=mean(Calories),avg_daily_mets=mean(average_daily_mets))
+caloriesandsteps_byday<- daily_combined_data %>% group_by(date) %>%drop_na() %>%  summarise(avg_step=mean(TotalSteps),avg_calories=mean(Calories),avg_daily_mets=mean(average_daily_mets))
 
 # z_score <- function(x){
 #   y <- (x - mean(x)) / sd(x)
@@ -327,7 +327,7 @@ presAnnotation <- function(dygraph, x, text) {
     dyAnnotation(x, text, attachAtBottom = FALSE, width = 60)
 }
 
-p <- dygraph(time_series, main = "Figure-2: Average Step vs Average Calories by day") |>dyOptions(fillGraph = TRUE,fillAlpha = 0.4,colors = RColorBrewer::brewer.pal(3, "Dark2"),useDataTimezone = TRUE) |>  dyRangeSelector()
+p <- dygraph(time_series, main = "Figure-2: Average Step vs Average Calories by day") %>%dyOptions(fillGraph = TRUE,fillAlpha = 0.4,colors = RColorBrewer::brewer.pal(3, "Dark2"),useDataTimezone = TRUE) %>%  dyRangeSelector()
 p
 ```
 
@@ -350,7 +350,7 @@ kbl(text_tbl) %>%
 
 
 ```{r, echo=FALSE, fig.height=7,fig.width=9}
-corr_data<-daily_combined_data |> select(TotalSteps,TotalDistance,TrackerDistance,VeryActiveDistance,ModeratelyActiveDistance,LightActiveDistance,SedentaryActiveDistance,Calories,activity_level)
+corr_data<-daily_combined_data %>% select(TotalSteps,TotalDistance,TrackerDistance,VeryActiveDistance,ModeratelyActiveDistance,LightActiveDistance,SedentaryActiveDistance,Calories,activity_level)
 
 ggpairs(daily_combined_data,columns = c(3,4,5,15,20,21),title="Figure-3: Daily correlations 1",ggplot2::aes(colour = activity_level,alpha=0.5),lower = list(combo = "count"),upper = list(continuous = wrap("cor", size=3)))+theme(axis.text.x  = element_text(size = 6, angle = 90),axis.text.y  = element_text(size = 6), text = element_text(size=9))
 ```
@@ -404,14 +404,14 @@ kbl(text_tbl) %>%
 ```
 
 ```{r, echo=FALSE}
-hourly_analysis1<-hourly_combined_data |> group_by(weekday,Hour) |> summarise(totalsteps=sum(StepTotal),total_calories=sum(Calories),.groups = 'drop')
+hourly_analysis1<-hourly_combined_data %>% group_by(weekday,Hour) %>% summarise(totalsteps=sum(StepTotal),total_calories=sum(Calories),.groups = 'drop')
 
 ggplot(data=hourly_analysis1)+geom_col(mapping = aes(x=Hour, y=total_calories, fill=totalsteps))+ scale_fill_gradient(low = "lightyellow", high = "red")+facet_wrap(~weekday, ncol = 2 )+labs(title = "Figure-5: Daily Activity by hour", y = "Total Calories")+scale_x_continuous(breaks = 0:23) + theme(axis.text.x = element_text(size = 5))
 ```
 
 
 ```{r,echo=FALSE}
-hourly_analysis2<-hourly_combined_data |> group_by(weekday,Hour) |> 
+hourly_analysis2<-hourly_combined_data %>% group_by(weekday,Hour) %>% 
   summarise(average_intensity_level=mean(TotalIntensity, na.rm = TRUE),total_calories=sum(Calories))
 
 ggplot(data=hourly_analysis2)+geom_col(mapping = aes(x=Hour, y=average_intensity_level, fill=total_calories))+facet_grid(weekday~.)+scale_fill_distiller(palette = "Spectral")+scale_x_continuous(breaks = 0:23) +labs(title = "Figure-6: Daily Intensity Level by hour", y = "Intensity Level") + theme(axis.text.x = element_text(size = 5)) + theme(panel.background = element_rect(fill = NA),panel.grid.major = element_line(colour = "gray90",
